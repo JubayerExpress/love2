@@ -24,7 +24,6 @@ if (noBtn) {
     noBtn.addEventListener("touchstart", moveButton);
 }
 
-
 // YES REDIRECT
 const yesBtn = document.getElementById('yes-btn');
 
@@ -34,8 +33,7 @@ if (yesBtn) {
     });
 }
 
-
-// HUG COUNTER (unchanged for yes page)
+// HUG COUNTER
 let hugCount = 0;
 const hugBtn = document.getElementById('hug-btn');
 const hugCounter = document.getElementById('hug-counter');
