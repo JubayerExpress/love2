@@ -9,7 +9,7 @@ body {
 }
 
 /* Main Layout */
-.main-wrapper {
+.main-wrapper, .container {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -69,7 +69,7 @@ h1 {
     position: fixed;
 }
 
-/* UPDATED Hug Button (New Romantic Gradient) */
+/* Hug Button Gradient */
 #hug-btn {
     background: linear-gradient(45deg, #a18cd1, #fbc2eb);
     color: white;
