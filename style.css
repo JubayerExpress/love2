@@ -1,14 +1,24 @@
+/* Body with animated gradient background */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Comic Sans MS', cursive;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffc3a0);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
     min-height: 100vh;
     text-align: center;
     overflow-x: hidden;
 }
 
-/* Main Layout */
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Main Wrapper */
 .main-wrapper {
     padding: 20px;
     display: flex;
@@ -35,12 +45,11 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* Buttons Section */
+/* Buttons */
 .buttons {
     position: relative;
 }
 
-/* General Button Style */
 .buttons button,
 #hug-btn {
     padding: 15px 25px;
@@ -52,50 +61,28 @@ h1 {
     transition: 0.3s ease;
 }
 
-/* YES Button */
 #yes-btn {
     background: #ff4d6d;
     color: white;
 }
-
 #yes-btn:hover {
     transform: scale(1.1);
 }
 
-/* NO Button (stays inside screen) */
 #no-btn {
     background: #ffb6c1;
     color: white;
-    position: fixed;
+    position: fixed; /* keeps it visible */
 }
 
-/* UPDATED Hug Button (New Romantic Gradient) */
+/* Hug Button Gradient */
 #hug-btn {
     background: linear-gradient(45deg, #a18cd1, #fbc2eb);
     color: white;
     border-radius: 20px;
 }
 
-#hug-counter {
-    color: white;
-    font-size: 1.2rem;
-}
-
-/* Rewards List (Yes Page) */
-.rewards {
-    list-style: none;
-    font-size: 1.3rem;
-    color: white;
-    padding: 0;
-}
-
-.flirty-lines {
-    margin-top: 20px;
-    color: white;
-    font-style: italic;
-}
-
-/* Cute GIF Section */
+/* GIF Container */
 .gif-container {
     margin-top: 40px;
     display: flex;
@@ -103,14 +90,27 @@ h1 {
     justify-content: center;
     gap: 15px;
 }
-
 .cute-gif {
     width: 80px;
     height: auto;
     border-radius: 12px;
 }
 
-/* Mobile Optimization */
+/* Floating hearts */
+.heart {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+    animation: floatUp 4s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0px); opacity: 1; }
+    100% { transform: translateY(-150px); opacity: 0; }
+}
+
+/* Mobile Adjustments */
 @media (max-width: 600px) {
 
     .greeting {
