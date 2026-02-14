@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-    margin-top: 120px;
+    margin-top: 100px;
     font-size: 3rem;
     color: white;
     text-shadow: 2px 2px 10px #ff4d6d;
@@ -23,6 +23,7 @@ h1 {
 
 .buttons {
     margin-top: 40px;
+    position: relative;
 }
 
 .buttons button, #hug-btn {
@@ -47,7 +48,7 @@ h1 {
 #no-btn {
     background: #ffb6c1;
     color: white;
-    position: absolute;
+    position: fixed; /* IMPORTANT FIX */
 }
 
 .rewards {
@@ -72,21 +73,23 @@ h1 {
     font-size: 1.2rem;
 }
 
-/* Floating GIF Styling */
+/* Floating Cute Stickers */
 
 .floating {
     position: absolute;
-    width: 120px;
-    animation: float 6s infinite ease-in-out;
+    width: 100px;
+    animation: float 5s infinite ease-in-out;
+    pointer-events: none;
 }
 
-.panda1 { top: 10%; left: 5%; }
-.panda2 { bottom: 10%; right: 5%; }
-.flower1 { top: 20%; right: 15%; }
-.flower2 { bottom: 20%; left: 15%; }
+.panda1 { top: 5%; left: 5%; }
+.panda2 { bottom: 5%; right: 5%; }
+.flower1 { top: 20%; right: 10%; }
+.heart1 { bottom: 20%; left: 10%; }
+.heart2 { top: 50%; right: 20%; }
 
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-15px); }
     100% { transform: translateY(0px); }
 }
