@@ -1,16 +1,17 @@
-// NO BUTTON MOVES BUT STAYS VISIBLE
 const noBtn = document.getElementById('no-btn');
-const container = document.querySelector('.container');
 
+// Move button safely inside viewport
 if (noBtn) {
+
     function moveButton() {
 
-        const containerRect = container.getBoundingClientRect();
+        const padding = 10; // space from edge
+
         const buttonWidth = noBtn.offsetWidth;
         const buttonHeight = noBtn.offsetHeight;
 
-        const maxX = containerRect.width - buttonWidth - 20;
-        const maxY = containerRect.height - buttonHeight - 20;
+        const maxX = window.innerWidth - buttonWidth - padding;
+        const maxY = window.innerHeight - buttonHeight - padding;
 
         const randomX = Math.random() * maxX;
         const randomY = Math.random() * maxY;
@@ -24,7 +25,7 @@ if (noBtn) {
 }
 
 
-// YES BUTTON REDIRECT
+// YES REDIRECT
 const yesBtn = document.getElementById('yes-btn');
 
 if (yesBtn) {
