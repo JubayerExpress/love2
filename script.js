@@ -5,7 +5,7 @@ if (noBtn) {
 
     function moveButton() {
 
-        const padding = 10; // space from edge
+        const padding = 20;
 
         const buttonWidth = noBtn.offsetWidth;
         const buttonHeight = noBtn.offsetHeight;
@@ -35,7 +35,7 @@ if (yesBtn) {
 }
 
 
-// HUG COUNTER
+// HUG COUNTER (unchanged for yes page)
 let hugCount = 0;
 const hugBtn = document.getElementById('hug-btn');
 const hugCounter = document.getElementById('hug-counter');
