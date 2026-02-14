@@ -6,19 +6,6 @@ body {
     min-height: 100vh;
     text-align: center;
     overflow-x: hidden;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Fade In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.98);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
 }
 
 /* Main Layout */
@@ -69,22 +56,19 @@ h1 {
 #yes-btn {
     background: #ff4d6d;
     color: white;
-    box-shadow: 0 0 15px rgba(255, 77, 109, 0.7);
 }
-
 #yes-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(255, 77, 109, 1);
 }
 
 /* NO Button (stays inside screen) */
 #no-btn {
     background: #ffb6c1;
     color: white;
-    position: absolute;
+    position: fixed; /* keeps it visible */
 }
 
-/* UPDATED Hug Button (New Romantic Gradient) */
+/* Hug Button Gradient */
 #hug-btn {
     background: linear-gradient(45deg, #a18cd1, #fbc2eb);
     color: white;
@@ -118,32 +102,10 @@ h1 {
     justify-content: center;
     gap: 15px;
 }
-
 .cute-gif {
     width: 80px;
     height: auto;
     border-radius: 12px;
-}
-
-/* Floating Hearts Effect */
-body::before {
-    content: "💖 💕 💘 💗 💓";
-    position: fixed;
-    top: -10%;
-    left: 0;
-    width: 100%;
-    font-size: 2rem;
-    animation: floatHearts 20s linear infinite;
-    opacity: 0.2;
-}
-
-@keyframes floatHearts {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(110vh);
-    }
 }
 
 /* Mobile Optimization */
@@ -155,12 +117,6 @@ body::before {
 
     h1 {
         font-size: 1.8rem;
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .buttons button,
