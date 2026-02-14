@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* vertically center content */
     min-height: 100vh;
     position: relative;
 }
@@ -37,7 +37,12 @@ h1 {
 
 /* Buttons Section */
 .buttons {
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical alignment in parent */
+    gap: 20px;                /* space between buttons */
     position: relative;
+    margin-top: 20px;
 }
 
 /* General Button Style */
@@ -78,20 +83,6 @@ h1 {
 #hug-counter {
     color: white;
     font-size: 1.2rem;
-}
-
-/* Rewards List (Yes Page) */
-.rewards {
-    list-style: none;
-    font-size: 1.3rem;
-    color: white;
-    padding: 0;
-}
-
-.flirty-lines {
-    margin-top: 20px;
-    color: white;
-    font-style: italic;
 }
 
 /* Cute GIF Section */
