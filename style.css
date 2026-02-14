@@ -57,6 +57,7 @@ h1 {
     background: #ff4d6d;
     color: white;
 }
+
 #yes-btn:hover {
     transform: scale(1.1);
 }
@@ -65,10 +66,10 @@ h1 {
 #no-btn {
     background: #ffb6c1;
     color: white;
-    position: fixed; /* keeps it visible */
+    position: fixed;
 }
 
-/* Hug Button Gradient */
+/* UPDATED Hug Button (New Romantic Gradient) */
 #hug-btn {
     background: linear-gradient(45deg, #a18cd1, #fbc2eb);
     color: white;
@@ -102,6 +103,7 @@ h1 {
     justify-content: center;
     gap: 15px;
 }
+
 .cute-gif {
     width: 80px;
     height: auto;
